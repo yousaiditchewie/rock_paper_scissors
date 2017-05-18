@@ -28,7 +28,9 @@ var evaluateWinner = function(player1Play, player2Play) {
 var tieGame = function(tie) {
   return tie = true;
 }
-
+var generateComputerPlay = function() {
+  return player2Play = Math.floor(Math.random() * (4 - 1) + 1);
+}
 
 // **** GLOBAL VARIABLES ****
 var winner,
