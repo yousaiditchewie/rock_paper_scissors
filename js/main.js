@@ -2,10 +2,12 @@ console.log(`Rock Paper Scissors Loaded!`)
 
 // **** MODEL: DATA MODEL ****
 
-var gameIsWon  = false;
-var gameLength = 1;
-var player1    = 'Player 1';
-var player2    = 'Player 2';
+var gameIsWon    = false;
+var gameLength   = 1;
+var player1      = 'Player 1';
+var player1Score = 0;
+var player2      = 'Player 2';
+var player2Score = 0;
 
 var startGame = function
 
