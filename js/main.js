@@ -9,7 +9,7 @@ var player1Score = 0;
 var player2      = 'Player 2';
 var player2Score = 0;
 
-var startGame = function
+var startGame = function(){};
 
 // **** MODEL: GAME LOGIC ****
 
