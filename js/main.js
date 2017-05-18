@@ -9,13 +9,18 @@ var player1Score = 0;
 var player2      = 'Player 2';
 var player2Score = 0;
 
-var startGame = function(){};
+var startGame = function(){
+  gameIsWon    = false;
+  gameLength   = 1;
+  player1      = 'Player 1';
+  player1Score = 0;
+  player2      = 'Player 2';
+  player2Score = 0;
+};
 
 // **** MODEL: GAME LOGIC ****
 
-// WINNING PLAYS
-
-var evaluateWinner = function(player1Play, player2Play) {
+function evaluateWinner(player1Play, player2Play) {
   tie = false;
   if (player1Play === player2Play) {
     return tieGame();
@@ -25,11 +30,19 @@ var evaluateWinner = function(player1Play, player2Play) {
     return winner = player1;
   }
 }
-var tieGame = function(tie) {
+function tieGame(tie) {
   return tie = true;
 }
-var generateComputerPlay = function() {
+function generateComputerPlay() {
   return player2Play = Math.floor(Math.random() * (4 - 1) + 1);
+}
+function playSingleGame(player1Play, player2Play, evaluateWinner) {
+  if (player2Play) {
+    return evaluateWinner(player1Play, player2Play);
+  } else {
+    generateComputerPlay();
+    return evaluateWinner(player1Play, player2Play);
+  }
 }
 
 // **** GLOBAL VARIABLES ****
