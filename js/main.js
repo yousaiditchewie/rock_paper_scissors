@@ -1,22 +1,22 @@
 console.log(`Rock Paper Scissors Loaded!`)
 
 // **** MODEL: DATA MODEL ****
-var gameIsWon    = false;
-var gameLength   = 1;
-var player1      = 'Player 1';
-var player1Score = 0;
-var player1Play;
-var player2      = 'Player 2';
-var player2Score = 0;
-var player2Play;
+var game = {
+  gameIsWon: false,
+  gameLength: 1,
+  player1: 'Player 1',
+  player1Score: 0,
+  player2: 'Player 2',
+  player2Score: 0
+}
 
 function startGame(){
-  gameIsWon    = false;
-  gameLength   = 1;
-  player1      = 'Player 1';
-  player1Score = 0;
-  player2      = 'Player 2';
-  player2Score = 0;
+  game.gameIsWon    = false;
+  game.gameLength   = 1;
+  game.player1      = 'Player 1';
+  game.player1Score = 0;
+  game.player2      = 'Player 2';
+  game.player2Score = 0;
 };
 
 // **** MODEL: GAME LOGIC ****
