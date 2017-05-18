@@ -1,7 +1,6 @@
 console.log(`Rock Paper Scissors Loaded!`)
 
 // **** MODEL: DATA MODEL ****
-
 var gameIsWon    = false;
 var gameLength   = 1;
 var player1      = 'Player 1';
@@ -11,7 +10,7 @@ var player2      = 'Player 2';
 var player2Score = 0;
 var player2Play;
 
-var startGame = function(){
+function startGame(){
   gameIsWon    = false;
   gameLength   = 1;
   player1      = 'Player 1';
@@ -21,7 +20,6 @@ var startGame = function(){
 };
 
 // **** MODEL: GAME LOGIC ****
-
 function evaluateWinner(player1Play, player2Play) {
   tie = false;
   if (player1Play === player2Play) {
