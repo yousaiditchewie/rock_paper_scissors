@@ -6,8 +6,10 @@ var gameIsWon    = false;
 var gameLength   = 1;
 var player1      = 'Player 1';
 var player1Score = 0;
+var player1Play;
 var player2      = 'Player 2';
 var player2Score = 0;
+var player2Play;
 
 var startGame = function(){
   gameIsWon    = false;
@@ -36,14 +38,7 @@ function tieGame(tie) {
 function generateComputerPlay() {
   return player2Play = Math.floor(Math.random() * (4 - 1) + 1);
 }
-function playSingleGame(player1Play, player2Play, evaluateWinner) {
-  if (player2Play) {
-    return evaluateWinner(player1Play, player2Play);
-  } else {
-    generateComputerPlay();
-    return evaluateWinner(player1Play, player2Play);
-  }
-}
+
 
 // **** GLOBAL VARIABLES ****
 var winner,
