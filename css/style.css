@@ -1,11 +1,13 @@
+
 body {
+  font-family: 'Open Sans', sans-serif;
   background: #1D8DFF;
   background-repeat: no-repeat;
   transition: all .25s;
-  font-family: 'Shrikhand', cursive;
   color: #FFF;
 }
 h1 {
+  font-family: 'Shrikhand', cursive;
   width: 100%;
   text-align: center;
   letter-spacing: 1px;
