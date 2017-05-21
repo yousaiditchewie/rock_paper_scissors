@@ -3,5 +3,10 @@ body {
   background-repeat: no-repeat;
   transition: all .25s;
   font-family: 'VT323', monospace;
+  color: #4DFF19;
+}
+h1 {
+  width: 100%;
+  text-align: center;
 }
 
