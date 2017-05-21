@@ -1,12 +1,14 @@
 body {
-  background: #282828;
+  background: #1D8DFF;
   background-repeat: no-repeat;
   transition: all .25s;
-  font-family: 'VT323', monospace;
-  color: #4DFF19;
+  font-family: 'Shrikhand', cursive;
+  color: #FFF;
 }
 h1 {
   width: 100%;
   text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.5);
 }
 
