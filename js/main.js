@@ -9,8 +9,8 @@ var game = {
 }
 
 function startGame(){
-  game.gameIsWon    = false;
-  game.gameLength   = 1;
+  game.isWon    = false;
+  game.length   = 1;
   game.player1      = 'Player 1';
   game.player1Score = 0;
   game.player2      = 'Player 2';
@@ -33,6 +33,16 @@ function tieGame(tie) {
 }
 function generateComputerPlay() {
   return player2Play = Math.floor(Math.random() * (4 - 1) + 1);
+}
+function setGameDuration(val) {
+  return game.length = val;
+}
+function checkGameIsOver() {
+  if (game.player1Score + game.player2Score === game.length) {
+    return game.isWon = true;
+  } else {
+    return game.isWon = false;
+  }
 }
 
 
