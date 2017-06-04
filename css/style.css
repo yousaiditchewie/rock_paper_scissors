@@ -1,13 +1,12 @@
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'VT323', monospace;
   background: #1D8DFF;
   background-repeat: no-repeat;
   transition: all .25s;
   color: #FFF;
 }
 h1 {
-  font-family: 'Shrikhand', cursive;
   width: 100%;
   text-align: center;
   letter-spacing: 1px;
