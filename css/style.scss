@@ -1,0 +1,40 @@
+$font-family: 'VT323', monospace;
+$background-primary-color: #282828;
+$background-secondary-color: #646464;
+$text-primary-color: #00FF00;
+$text-secondary-color: #E0E0E0;
+$shadow: 1px 4px 8px rgba(0,0,0,0.75);
+$radius-strong: 6px;
+$radius-soft: 3px;
+$rock-url: url('assets/rock.png');
+$paper-url: url('assets/paper.png');
+$scissors-url: url('assets/scissors.png');
+
+body {
+  font-family: $font-family;
+  background-color: $background-primary-color;
+  color: $text-primary-color;
+  text-shadow: $shadow;
+}
+h1 {
+  font-size: 2.5rem;
+  width: 100%;
+}
+h4 {
+  font-size: 1.75rem;
+  width: 100%;
+}
+// helper classes
+.center-text {
+  text-align: center;
+}
+.border {
+  border: 2px solid $text-primary-color;
+}
+// section classes
+#message-board {
+  font-size: 1rem;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
