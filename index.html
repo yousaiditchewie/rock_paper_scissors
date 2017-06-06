@@ -10,14 +10,40 @@
 <body>
   <h1 class="center-text">Rock, Paper, Scissors...</h1>
   <h4 class="center-text">A game of patience.  A game of discipline.  A game of Emoji's.</h4>
-  <div id="message-board" class="border">Choose your play...</div>
-  <div id="game-board">
-    <div id="computer"></div>
-    <div id="player-1"></div>
+  <div id="message-board" class="border center-text">Choose your play...</div>
+  <div id="game-board" class="border">
+    <div id="computer">
+      <div class="center-text">Computer</div>
+      <img valign="center" src="assets/computer.png" alt="Computer">
+    </div>
+    <div id="player-1">
+      <div class="center-text">Player 1</div>
+      <img id="rock" src="assets/rock.png" alt="Rock">
+      <img id="paper" src="assets/paper.png" alt="Paper">
+      <img id="scissors" src="assets/scissors.png" alt="Scissors">
+    </div>
   </div>
   <div id="score-board">
-
+    <table>
+      <tbody>
+        <tr>
+          <td>Player-1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Computer</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Game</td>
+          <td>1 0f 1</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+  <div id="reset-button" class="border center-text">RESET</div>
+  <div id="overlay" class="hide-this"></div>
+  <div id="message-overlay" class="border hide-this"></div>
   <script src="js/main.js"></script>
 </body>
 </html>
