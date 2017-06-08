@@ -10,11 +10,11 @@
 <body>
   <h1 class="center-text">Rock, Paper, Scissors...</h1>
   <h4 class="center-text">A game of patience.  A game of discipline.  A game of Emoji's.</h4>
-  <div id="message-board" class="border center-text">Choose your play...</div>
+  <div id="message-board" class="border center-text"></div>
   <div id="game-board" class="border">
     <div id="computer">
       <div class="center-text">Computer</div>
-      <img id="computer-img" valign="center" src="assets/computer.png" alt="Computer">
+      <img id="computer-img" valign="center" src="">
     </div>
     <div id="player-1">
       <div class="center-text">Player 1</div>
@@ -23,16 +23,16 @@
       <img id="scissors" src="assets/scissors.png" alt="Scissors">
     </div>
   </div>
-  <div id="score-board" class="hide-this">
+  <div id="score-board">
     <table border="2">
       <tbody>
-        <tr id="player-1-score">
+        <tr>
           <td>Player-1</td>
-          <td>0</td>
+          <td id="player-1-score"></td>
         </tr>
-        <tr id="player-2-score">
+        <tr>
           <td>Computer</td>
-          <td>0</td>
+          <td id="player-2-score"></td>
         </tr>
         <tr class="hide-this">
           <td>Game</td>
