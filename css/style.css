@@ -74,8 +74,13 @@ h4 {
 table {
   width: 250px;
   margin: 0 auto;
-  text-align: center;
   font-size: 1.25rem; }
+
+td {
+  padding: 3px;
+  text-align: left; }
+  td:last-child {
+    text-align: center; }
 
 #reset-button {
   width: 100px;

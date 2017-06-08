@@ -14,7 +14,7 @@
   <div id="game-board" class="border">
     <div id="computer">
       <div class="center-text">Computer</div>
-      <img valign="center" src="assets/computer.png" alt="Computer">
+      <img id="computer-img" valign="center" src="assets/computer.png" alt="Computer">
     </div>
     <div id="player-1">
       <div class="center-text">Player 1</div>
@@ -23,25 +23,25 @@
       <img id="scissors" src="assets/scissors.png" alt="Scissors">
     </div>
   </div>
-  <div id="score-board">
-    <table>
+  <div id="score-board" class="hide-this">
+    <table border="2">
       <tbody>
-        <tr>
+        <tr id="player-1-score">
           <td>Player-1</td>
           <td>0</td>
         </tr>
-        <tr>
+        <tr id="player-2-score">
           <td>Computer</td>
           <td>0</td>
         </tr>
-        <tr>
+        <tr class="hide-this">
           <td>Game</td>
           <td>1 0f 1</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div id="reset-button" class="border center-text">RESET</div>
+  <div id="reset-button" class="border center-text" onclick="startGame()">RESET</div>
   <div id="overlay" class="hide-this"></div>
   <div id="message-overlay" class="border hide-this"></div>
   <script src="js/main.js"></script>
