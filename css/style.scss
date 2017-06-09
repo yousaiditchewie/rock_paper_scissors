@@ -10,6 +10,9 @@ $rock-url: url('assets/rock.png');
 $paper-url: url('assets/paper.png');
 $scissors-url: url('assets/scissors.png');
 
+* {
+  transition: all 2.5s;
+}
 body {
   font-family: $font-family;
   background-color: $background-primary-color;
@@ -77,12 +80,21 @@ h4 {
 #computer img {
   display: block;
   margin: 50% auto 0 auto;
+  &:hover {
+    cursor: pointer;
+  }
 }
 #player-1 img {
   display: block;
   height: 150px;
   margin: 10px auto;
-  transform: rotate(270deg);
+  &.rotate {
+    transform: rotate(270deg);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+
 }
 #player-1 #rock {
   height: 135px;
@@ -105,8 +117,10 @@ td {
   background-color: $background-secondary-color;
   font-size: 1.75rem;
   margin: 15px auto;
+  transition: all .25s;
   &:hover {
     cursor: pointer;
+    background-color: $text-secondary-color;
   }
 }
 #overlay {
