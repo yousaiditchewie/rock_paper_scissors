@@ -1,5 +1,5 @@
 * {
-  transition: all 2.5s; }
+  transition: all .25s; }
 
 body {
   font-family: "VT323", monospace;
@@ -126,6 +126,6 @@ td {
   background-color: #000000; }
 
 .hide-this {
-  display: none !important; }
+  opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */

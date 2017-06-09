@@ -11,7 +11,7 @@ $paper-url: url('assets/paper.png');
 $scissors-url: url('assets/scissors.png');
 
 * {
-  transition: all 2.5s;
+  transition: all .25s;
 }
 body {
   font-family: $font-family;
@@ -147,5 +147,5 @@ td {
   background-color: #000000;
 }
 .hide-this {
-  display: none !important;
+  opacity: 0;
 }

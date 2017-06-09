@@ -44,21 +44,22 @@ function startGame(){
   game.computerImgUrl = imageUrls[0];
   game.winner         = undefined;
   game.tie            = false;
+  showAllHands();
   render();
 };
 
 
 // **** MODEL: GAME LOGIC ****
 function evaluateWinner(player1Play, player2Play) {
-  console.log(`computer played ${player2Play}`)
+  game.tie = false;
   if (player1Play === player2Play) {
     return tieGame();
   } else if (player1Play === rock && player2Play === paper || player1Play === paper && player2Play === scissors || player1Play === scissors && player2Play === rock) {
     game.player2Score++;
-    return winner = game.player2;
+    return game.winner = game.player2;
   } else {
     game.player1Score++;
-    return winner = game.player1;
+    return game.winner = game.player1;
   }
 }
 function tieGame() {
@@ -80,11 +81,37 @@ function checkGameIsOver() {
 function play(hand) {
   var playWord   = hand.id;
   var playNumber = eval(hand.id);
-  console.log('player 1 played ' + playWord);
-  console.log('winner = ' + evaluateWinner(playNumber, generateComputerPlay()));
+  var computerPlay = generateComputerPlay();
+  hideHands(playWord);
+  showComputerPlay(computerPlay);
+  evaluateWinner(playNumber, computerPlay);
+  updateMessage();
+  render();
 }
 function updateMessage() {
-
+  if (game.tie) {
+    return game.message = messages[1];
+  }
+  else if (game.winner === game.player1) {
+    return game.message = messages[2];
+  } else {
+    return game.message = messages[3];
+  }
+}
+function showComputerPlay(computerPlay) {
+  return game.computerImgUrl = imageUrls[computerPlay];
+}
+function hideHands(playedHand) {
+  if (playedHand === 'rock') {
+    paperEl.classList.add('hide-this');
+    scissorsEl.classList.add('hide-this');
+  } else if (playedHand === 'paper') {
+    rockEl.classList.add('hide-this');
+    scissorsEl.classList.add('hide-this');
+  } else {
+    rockEl.classList.add('hide-this');
+    paperEl.classList.add('hide-this');
+  }
 }
 function showAllHands() {
   rockEl.classList.remove('hide-this');
@@ -103,8 +130,8 @@ var scissorsEl   = document.getElementById('scissors');
 function render() {
   messageBoard.innerHTML = game.message;
   computerImg.src        = game.computerImgUrl;
-  player1Score.innerHTML = game.player1Score;
-  player2Score.innerHTML = game.player2Score;
+  // player1Score.innerHTML = game.player1Score;
+  // player2Score.innerHTML = game.player2Score;
 }
 
 // **** GLOBAL VARIABLES ****
