@@ -10,6 +10,7 @@ $rock-url: url('assets/rock.png');
 $paper-url: url('assets/paper.png');
 $scissors-url: url('assets/scissors.png');
 
+
 * {
   transition: all .25s;
 }
@@ -29,6 +30,7 @@ h4 {
   font-size: 1.75rem;
   width: 100%;
   margin: 15px 0 30px 0;
+
 }
 // helper classes
 .center-text {
@@ -63,6 +65,10 @@ h4 {
   display: block;
   width: calc(50% - 1px);
   height: 100%;
+  div {
+    margin-top: 10px;
+    font-size: 1.25rem;
+  }
 }
 #computer {
   float: left;
@@ -71,11 +77,6 @@ h4 {
 #player-1 {
   float: right;
   border-left: 1px solid $text-primary-color;
-}
-#computer div,
-#player-1 div {
-  margin-top: 10px;
-  font-size: 1.25rem;
 }
 #computer img {
   display: block;
@@ -148,4 +149,56 @@ td {
 }
 .hide-this {
   opacity: 0;
+}
+// @media screen and (max-width: 550px) {
+//   h1 {
+//     font-size: 4rem;
+//   }
+// }
+@media (min-width: 768px) and
+       (-webkit-min-device-pixel-ratio: 2),
+       (min-width: 768px) and
+       (min-resolution: 192dpi) {
+  h1 {
+    font-size: 4rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
+  #message-board {
+    width: 60%;
+    font-size: 3.5rem;
+  }
+  #game-board {
+    width: 70%;
+    height: 50vh;
+    margin-top: 50px;
+  }
+  #computer,
+  #player-1 {
+    div {
+      margin-top: 20px;
+      margin-bottom: 30%;
+      font-size: 3.25rem;
+    }
+    #computer-img {
+      height: 250px;
+      width: auto;
+      margin-top: 70%;
+    }
+  }
+  #player-1 {
+    img {
+      height: 200px;
+    }
+    #rock {
+      height: 165px;
+    }
+  }
+  #reset-button {
+    width: 30vw;
+    padding: 30px;
+    font-size: 4.5rem;
+    margin-top: 50px;
+  }
 }
