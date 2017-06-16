@@ -1,9 +1,10 @@
-document.addEventListener('readystatechange', function(evt) {
-  if (evt.path[0].readyState === 'complete') {
-    console.log(`Rock Paper Scissors Loaded!`);
-    startGame();
-  }
-});
+// document.addEventListener('readystatechange', function(evt) {
+//   alert(evt.path[0].readyState);
+//   if (evt.path[0].readyState === 'complete') {
+//     console.log(`Rock Paper Scissors Loaded!`);
+//     startGame();
+//   }
+// });
 
 // **** MODEL: DATA MODEL ****
 var messages = [
