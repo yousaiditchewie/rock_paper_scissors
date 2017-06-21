@@ -1,11 +1,3 @@
-// document.addEventListener('readystatechange', function(evt) {
-//   alert(evt.path[0].readyState);
-//   if (evt.path[0].readyState === 'complete') {
-//     console.log(`Rock Paper Scissors Loaded!`);
-//     startGame();
-//   }
-// });
-
 // **** MODEL: DATA MODEL ****
 var messages = [
   'Choose your play...',
@@ -131,10 +123,6 @@ var scissorsEl   = document.getElementById('scissors');
 function render() {
   messageBoard.innerHTML = game.message;
   computerImg.src        = game.computerImgUrl;
-  // player1Score.innerHTML = game.player1Score;
-  // player2Score.innerHTML = game.player2Score;
 }
 
-// **** GLOBAL VARIABLES ****
-// var winner,
-//     tie;
+
